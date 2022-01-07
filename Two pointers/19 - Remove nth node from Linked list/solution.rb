@@ -15,9 +15,7 @@
 def remove_nth_from_end(head, n)
   fast_ptr = slow_ptr = head
 
-  (0..n-1).each do |index|
-    fast_ptr = fast_ptr.next
-  end
+  n.times { fast_ptr = fast_ptr.next }
 
   return head.next unless fast_ptr
 
